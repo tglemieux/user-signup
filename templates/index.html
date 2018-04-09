@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Create a new login:</h2>
+    <form action="/validate" method="post">
+        <label for="username">
+            Username:<input id="username" type="text" name="username" value='{{username}}' />
+        </label>
+        <span class="error">{{username_error}}</span>
+    </br>
+        <label for="password">
+            Password:<input id="password" type="password" name="password" value='{{password}}' />
+        </label>
+        <span class="error">{{password_error}}</span>
+    </br>
+        <label for="verify_password">
+            Verify Password:<input id="verify_password" type="password" name="verify_password" value='{{verify_password}}' />
+        </label>
+        <span class="error">{{verify_password_error}}</span>
+    </br>
+        <label for="email">
+            Email(Optional):<input id="email" type="text" name="email" value="{{email}}" />
+        </label>
+        <span class="error">{{email_error}}</span>
+    </br>
+    </br>
+        <input type="submit" value="Login" />
+    </form>
+
+{% endblock %}
